@@ -427,23 +427,6 @@ footer {
     transform: translateY(-3px);
 }
 
-
-/* Responsivo: 1 columna en celulares */
-
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .footer-column h3::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .footer-links li {
-        justify-content: center;
-    }
-}
-
 /* Ajustes Finales para Dispositivos Móviles */
 @media (max-width: 480px) {
     .hero-title {
