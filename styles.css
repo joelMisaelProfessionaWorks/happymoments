@@ -428,114 +428,83 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* 1. Navegación y Header */
-    header {
-        padding: 5px 0;
-    }
-
+    /* 1. Header: Reducimos tamaños y espacio */
     .logo-text {
-        font-size: 20px; /* Tamaño reducido para móviles */
+        font-size: 18px !important;
     }
     
     .logo-icon {
-        font-size: 22px;
+        font-size: 20px !important;
     }
 
     nav ul {
-        gap: 15px; /* Menos espacio entre enlaces */
+        gap: 10px; /* Espacio mínimo entre links */
     }
 
     nav a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .nav-buttons {
-        display: none; /* Ocultamos el botón extra para ganar espacio */
+        display: none; /* Ocultar botón "pongase en contacto" en móviles */
     }
 
-    /* 2. Sección de Inicio (Hero) */
+    /* 2. Sección Inicio (Hero): Forzamos una sola columna */
     .hero {
-        height: auto;
-        padding-top: 100px; /* Espacio para que el header fijo no lo tape */
-        padding-bottom: 50px;
+        height: auto; /* Dejamos que crezca según el contenido */
+        padding: 100px 0 50px;
     }
 
     .hero .container {
-        flex-direction: column; /* Texto arriba, imagen abajo */
+        flex-direction: column !important; /* Texto arriba, imagen abajo */
         text-align: center;
+        align-items: center;
     }
 
     .hero-content {
-        width: 100%;
-        padding: 0 10px;
+        width: 100% !important; /* Ocupa todo el ancho */
+        max-width: 100%;
+        margin-bottom: 30px;
     }
 
     .hero-title {
-        font-size: 32px; /* Título más pequeño y legible */
+        font-size: 28px !important; /* Título más pequeño para que no se corte */
         line-height: 1.2;
     }
 
     .hero-subtitle {
         justify-content: center;
-        font-size: 16px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
+        font-size: 14px;
+        margin-bottom: 20px;
     }
 
     .hero img {
-        width: 85%; /* Imagen del logo ajustada */
+        width: 100% !important; /* La imagen se ajusta al ancho del celular */
+        max-width: 300px; /* Limitamos el tamaño para que no se vea gigante */
         height: auto;
-        margin: 30px auto 0;
     }
 
-    /* 3. Catálogo de Servicios */
+    /* 3. Catálogo: Una sola tarjeta por fila */
     .product-grid {
-        grid-template-columns: 1fr; /* Una sola columna para que las fotos luzcan */
-        gap: 25px;
+        grid-template-columns: 1fr !important;
+        gap: 20px;
     }
 
-    .product-img {
-        height: 250px;
-    }
-
-    .section-title {
-        font-size: 32px;
-    }
-
-    /* 4. Footer (Contactos) */
+    /* 4. Footer: Centramos todo */
     .footer-content {
-        grid-template-columns: 1fr; /* Columnas apiladas verticalmente */
+        grid-template-columns: 1fr !important;
         text-align: center;
-        gap: 30px;
     }
 
     .footer-column h3::after {
-        left: 50%; /* Centrar la línea decorativa debajo de los títulos */
+        left: 50% !important;
         transform: translateX(-50%);
-    }
-
-    .footer-links li {
-        justify-content: center; /* Centrar iconos de teléfono y correo */
     }
 
     .social-links {
         justify-content: center;
     }
 }
-
-/* Ajuste extra para teléfonos muy pequeños (iPhone SE, etc.) */
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 28px;
-    }
-    
-    .logo-text span {
-        display: none; /* Oculta la segunda palabra si el nombre es muy largo */
-    }
-}
-
 /* Animations */
 
 @keyframes fadeInUp {
