@@ -428,43 +428,57 @@ footer {
 }
 
 /* ============================================================
-   SOLUCIÓN FINAL: LOGO Y DISEÑO RESPONSIVO
+   DISEÑO MÓVIL FINAL: LOGO ARRIBA Y MENÚ ABAJO
    ============================================================ */
 
 @media (max-width: 768px) {
-    /* 1. Header: Ajuste del Logo para que no se corte */
+    /* 1. Header: Apilamos logo y navegación verticalmente */
+    header {
+        padding: 15px 0;
+    }
+
     .header-container {
-        flex-direction: column; /* Ponemos el logo arriba y el menú abajo si es necesario */
-        gap: 10px;
+        flex-direction: column !important; /* Logo arriba, Nav abajo */
+        gap: 15px;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+        width: 100%;
     }
 
     .logo-text {
-        font-size: 22px !important; /* Un poco más grande para que se lea bien */
-        display: flex;
-        flex-wrap: nowrap; /* Evita que las palabras se encimen */
+        font-size: 24px !important;
+        white-space: nowrap; /* Mantiene "Happy Moments" en una línea */
     }
 
-    .logo-text span {
-        margin-left: 4px; /* Espacio entre Happy y Moments */
+    /* 2. Menú de Navegación debajo del logo */
+    nav {
+        width: 100%;
     }
-    
+
     nav ul {
-        gap: 12px;
-        padding-bottom: 5px;
+        flex-direction: row; /* Mantenemos los links en fila */
+        justify-content: center;
+        flex-wrap: wrap; /* Si son muchos, se pasan a otra línea */
+        gap: 15px;
+        padding: 0;
     }
 
     nav a {
         font-size: 14px;
+        padding: 5px 10px;
     }
 
     .nav-buttons {
-        display: none;
+        display: none; /* Ocultamos el botón largo para ganar espacio */
     }
 
-    /* 2. Hero: Centrado perfecto y apilado */
+    /* 3. Ajuste de la Sección de Bienvenida (Hero) */
     .hero {
         height: auto;
-        padding: 120px 0 60px; /* Más espacio arriba por el header doble */
+        padding: 160px 0 60px; /* Aumentamos espacio superior por el header más alto */
     }
 
     .hero .container {
@@ -475,39 +489,35 @@ footer {
 
     .hero-content {
         width: 100% !important;
-        padding: 0 15px;
+        padding: 0 20px;
     }
 
     .hero-title {
-        font-size: 30px !important;
+        font-size: 28px !important;
         line-height: 1.2;
-        margin: 0 auto 20px;
-        max-width: 90%; /* Evita que el texto toque los bordes */
+        margin-bottom: 20px;
     }
 
     .hero-subtitle {
         justify-content: center;
-        width: 100%;
+        font-size: 14px;
     }
 
-    .hero-text {
-        font-size: 15px;
-        margin-bottom: 30px;
-    }
-
-    /* 3. Imagen del Logo abajo */
+    /* Imagen del sol/logo centrada abajo del texto */
     .hero img {
-        width: 90% !important;
-        max-width: 320px;
+        width: 80% !important;
+        max-width: 280px;
         height: auto;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
-    /* 4. Catálogo y Footer */
+    /* 4. Catálogo: Una sola tarjeta por fila */
     .product-grid {
         grid-template-columns: 1fr !important;
+        padding: 0 10px;
     }
 
+    /* 5. Footer Centrado */
     .footer-content {
         grid-template-columns: 1fr !important;
         text-align: center;
@@ -516,16 +526,6 @@ footer {
     .footer-column h3::after {
         left: 50% !important;
         transform: translateX(-50%);
-    }
-}
-
-/* Ajuste extremo para pantallas muy pequeñas */
-@media (max-width: 380px) {
-    .logo-text {
-        font-size: 18px !important;
-    }
-    .hero-title {
-        font-size: 26px !important;
     }
 }
 /* Animations */
