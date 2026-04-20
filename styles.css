@@ -427,37 +427,114 @@ footer {
     transform: translateY(-3px);
 }
 
-/* Ajustes Finales para Dispositivos Móviles */
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 30px; /* Evita que el título se vea gigante en pantallas chicas */
+@media (max-width: 768px) {
+    /* 1. Navegación y Header */
+    header {
+        padding: 5px 0;
+    }
+
+    .logo-text {
+        font-size: 20px; /* Tamaño reducido para móviles */
+    }
+    
+    .logo-icon {
+        font-size: 22px;
+    }
+
+    nav ul {
+        gap: 15px; /* Menos espacio entre enlaces */
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .nav-buttons {
+        display: none; /* Ocultamos el botón extra para ganar espacio */
+    }
+
+    /* 2. Sección de Inicio (Hero) */
+    .hero {
+        height: auto;
+        padding-top: 100px; /* Espacio para que el header fijo no lo tape */
+        padding-bottom: 50px;
+    }
+
+    .hero .container {
+        flex-direction: column; /* Texto arriba, imagen abajo */
+        text-align: center;
     }
 
     .hero-content {
+        width: 100%;
         padding: 0 10px;
     }
 
+    .hero-title {
+        font-size: 32px; /* Título más pequeño y legible */
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero img {
+        width: 85%; /* Imagen del logo ajustada */
+        height: auto;
+        margin: 30px auto 0;
+    }
+
+    /* 3. Catálogo de Servicios */
     .product-grid {
-        /* Cambiamos a 1 sola columna para que las fotos se vean grandes y claras */
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Una sola columna para que las fotos luzcan */
         gap: 25px;
     }
 
     .product-img {
-        height: 220px; /* Reducimos un poco la altura para que quepa mejor en pantalla */
+        height: 250px;
     }
 
-    footer .footer-content {
-        grid-template-columns: 1fr; /* El footer también en una columna */
+    .section-title {
+        font-size: 32px;
+    }
+
+    /* 4. Footer (Contactos) */
+    .footer-content {
+        grid-template-columns: 1fr; /* Columnas apiladas verticalmente */
         text-align: center;
+        gap: 30px;
     }
 
     .footer-column h3::after {
-        left: 50%;
+        left: 50%; /* Centrar la línea decorativa debajo de los títulos */
         transform: translateX(-50%);
+    }
+
+    .footer-links li {
+        justify-content: center; /* Centrar iconos de teléfono y correo */
+    }
+
+    .social-links {
+        justify-content: center;
     }
 }
 
+/* Ajuste extra para teléfonos muy pequeños (iPhone SE, etc.) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .logo-text span {
+        display: none; /* Oculta la segunda palabra si el nombre es muy largo */
+    }
+}
 
 /* Animations */
 
