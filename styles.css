@@ -444,16 +444,34 @@ footer {
     }
 }
 
+/* Ajustes Finales para Dispositivos Móviles */
 @media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        /* Alinea el menú verticalmente */
-        align-items: center;
-        gap: 10px;
-    }
     .hero-title {
-        font-size: 32px;
-        /* Reduce un poco el título para que no ocupe toda la pantalla */
+        font-size: 30px; /* Evita que el título se vea gigante en pantallas chicas */
+    }
+
+    .hero-content {
+        padding: 0 10px;
+    }
+
+    .product-grid {
+        /* Cambiamos a 1 sola columna para que las fotos se vean grandes y claras */
+        grid-template-columns: 1fr; 
+        gap: 25px;
+    }
+
+    .product-img {
+        height: 220px; /* Reducimos un poco la altura para que quepa mejor en pantalla */
+    }
+
+    footer .footer-content {
+        grid-template-columns: 1fr; /* El footer también en una columna */
+        text-align: center;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
