@@ -427,70 +427,87 @@ footer {
     transform: translateY(-3px);
 }
 
+/* ============================================================
+   SOLUCIÓN FINAL: LOGO Y DISEÑO RESPONSIVO
+   ============================================================ */
+
 @media (max-width: 768px) {
-    /* 1. Header: Reducimos tamaños y espacio */
-    .logo-text {
-        font-size: 18px !important;
-    }
-    
-    .logo-icon {
-        font-size: 20px !important;
+    /* 1. Header: Ajuste del Logo para que no se corte */
+    .header-container {
+        flex-direction: column; /* Ponemos el logo arriba y el menú abajo si es necesario */
+        gap: 10px;
     }
 
+    .logo-text {
+        font-size: 22px !important; /* Un poco más grande para que se lea bien */
+        display: flex;
+        flex-wrap: nowrap; /* Evita que las palabras se encimen */
+    }
+
+    .logo-text span {
+        margin-left: 4px; /* Espacio entre Happy y Moments */
+    }
+    
     nav ul {
-        gap: 10px; /* Espacio mínimo entre links */
+        gap: 12px;
+        padding-bottom: 5px;
     }
 
     nav a {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .nav-buttons {
-        display: none; /* Ocultar botón "pongase en contacto" en móviles */
+        display: none;
     }
 
-    /* 2. Sección Inicio (Hero): Forzamos una sola columna */
+    /* 2. Hero: Centrado perfecto y apilado */
     .hero {
-        height: auto; /* Dejamos que crezca según el contenido */
-        padding: 100px 0 50px;
+        height: auto;
+        padding: 120px 0 60px; /* Más espacio arriba por el header doble */
     }
 
     .hero .container {
-        flex-direction: column !important; /* Texto arriba, imagen abajo */
-        text-align: center;
+        flex-direction: column !important;
         align-items: center;
+        text-align: center;
     }
 
     .hero-content {
-        width: 100% !important; /* Ocupa todo el ancho */
-        max-width: 100%;
-        margin-bottom: 30px;
+        width: 100% !important;
+        padding: 0 15px;
     }
 
     .hero-title {
-        font-size: 28px !important; /* Título más pequeño para que no se corte */
+        font-size: 30px !important;
         line-height: 1.2;
+        margin: 0 auto 20px;
+        max-width: 90%; /* Evita que el texto toque los bordes */
     }
 
     .hero-subtitle {
         justify-content: center;
-        font-size: 14px;
-        margin-bottom: 20px;
+        width: 100%;
     }
 
+    .hero-text {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    /* 3. Imagen del Logo abajo */
     .hero img {
-        width: 100% !important; /* La imagen se ajusta al ancho del celular */
-        max-width: 300px; /* Limitamos el tamaño para que no se vea gigante */
+        width: 90% !important;
+        max-width: 320px;
         height: auto;
+        margin-top: 20px;
     }
 
-    /* 3. Catálogo: Una sola tarjeta por fila */
+    /* 4. Catálogo y Footer */
     .product-grid {
         grid-template-columns: 1fr !important;
-        gap: 20px;
     }
 
-    /* 4. Footer: Centramos todo */
     .footer-content {
         grid-template-columns: 1fr !important;
         text-align: center;
@@ -500,9 +517,15 @@ footer {
         left: 50% !important;
         transform: translateX(-50%);
     }
+}
 
-    .social-links {
-        justify-content: center;
+/* Ajuste extremo para pantallas muy pequeñas */
+@media (max-width: 380px) {
+    .logo-text {
+        font-size: 18px !important;
+    }
+    .hero-title {
+        font-size: 26px !important;
     }
 }
 /* Animations */
