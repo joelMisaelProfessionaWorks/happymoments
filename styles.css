@@ -6,8 +6,15 @@
     --logo-gold: #D4AF37;
     --text-dark: #2c2416;
     --text-light: #f3f3f3;
-    --text-logo: #fde208;
+    --text-logo: #FFB800;
     --text-suave: #D2B48C;
+    --text-pink: #F2D5C4;
+    --textr-pink-light: #DCA7A7;
+    --text-rosa: #F8E1E7;
+    --logo: #4B2C5E;
+    --second-part: #2D2D2D;
+    --card-purple: #d8cff7;
+    --title-vino: #641E16;
 }
 
 * {
@@ -19,7 +26,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background: var(--laugh-color);
-    color: var(--text-dark);
+    color: var(--text-light);
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -35,7 +42,7 @@ body {
 /*header & navigation */
 
 header {
-    background: #161515;
+    background: var(--text-pink);
     position: fixed;
     width: 100%;
     top: 0%;
@@ -58,7 +65,7 @@ header {
 }
 
 .logo-icon {
-    color: var(--logo-gold);
+    color: var(--logo);
     font-size: 28px;
 }
 
@@ -69,7 +76,13 @@ header {
 }
 
 .logo-text span {
-    color: var(--laugh-color)
+    color: var(--second-part);
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
@@ -80,7 +93,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: var(--text-light);
+    color: var(--second-part);
     font-weight: 600;
     font-size: 20px;
     position: relative;
@@ -93,7 +106,7 @@ nav a:after {
     position: absolute;
     width: 0;
     height: 10px;
-    background: var(--laugh-color);
+    background: var(--logo);
     left: 0;
     bottom: 0px;
     transition: all 0.3s ease;
@@ -121,12 +134,12 @@ nav a:hover:after {
 }
 
 .btn-primary {
-    background: var(--emotional-color);
+    background: var(--logo);
     color: white;
 }
 
 .btn-primary:hover {
-    background: var(--Happy-color);
+    background: var(--card-purple);
     transform: translateY(-2px);
 }
 
@@ -149,13 +162,13 @@ nav a:hover:after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #0B0705 0%, #010000 50%);
+    background: var(--laugh-color);
     z-index: -1;
 }
 
 .hero-content {
     width: 600px;
-    COLOR: var(--text-light);
+    COLOR: var(--text-dark);
     animation: fadeInUp 1s ease-out;
 }
 
@@ -165,7 +178,7 @@ nav a:hover:after {
 
 .hero-subtitle {
     font-size: 20px;
-    color: var(--text-suave);
+    color: var(--text-dark);
     margin-top: 20px;
     margin-bottom: 60px;
     display: flex;
@@ -185,7 +198,7 @@ nav a:hover:after {
     line-height: 1.1;
     margin-bottom: 25px;
     letter-spacing: 0.5px;
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .hero-title span {
@@ -211,7 +224,7 @@ nav a:hover:after {
 .products {
     padding: 120px 0;
     position: relative;
-    background-color: #161515;
+    background-color: var(--text-pink);
     border-top: 4px solid var(--text-logo);
 }
 
@@ -223,13 +236,13 @@ nav a:hover:after {
 
 .section-subtitle {
     font-size: 20px;
-    color: var(--logo-gold);
+    color: var(--sad-color);
     margin-bottom: 15px;
 }
 
 .section-title {
     font-size: 42px;
-    color: var(--logo-gold);
+    color: var(--text-dark);
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -243,12 +256,12 @@ nav a:hover:after {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: var(--logo-gold);
+    background: var(--sad-color);
 }
 
 .section-desc {
     font-size: 18px;
-    color: var(--text-light);
+    color: var(--sad-color);
 }
 
 .product-grid {
@@ -258,7 +271,7 @@ nav a:hover:after {
 }
 
 .product-card {
-    background: var(--emotional-color);
+    background: var(--card-purple);
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -268,11 +281,11 @@ nav a:hover:after {
 
 .product-card:hover {
     transform: translateY(-15px);
-    border: 2px solid var(--logo-gold);
+    border: 2px solid var(--logo);
 }
 
 .product-img {
-    height: 280px;
+    height: 400px;
     overflow: hidden;
 }
 
@@ -296,12 +309,12 @@ nav a:hover:after {
     position: absolute;
     top: -20px;
     right: 20px;
-    background: var(--logo-gold);
+    background: var(--text-logo);
     color: #161515;
     /* Texto oscuro para que resalte sobre el dorado */
     padding: 8px 18px;
-    border-radius: 20px;
-    font-weight: 700;
+    border-radius: 40px;
+    font-weight: 290;
     font-size: 14px;
     z-index: 10;
     /* Asegura que esté por encima de todo */
@@ -316,7 +329,7 @@ nav a:hover:after {
 
 .product-desc {
     font-size: 16px;
-    color: var(--text-light);
+    color: var(--sad-color);
     margin-bottom: 20px;
 }
 
@@ -328,7 +341,7 @@ nav a:hover:after {
 
 .product-price {
     font-size: 24px;
-    color: var(--logo-gold);
+    color: var(--sad-color);
     font-weight: 700;
 }
 
@@ -347,10 +360,10 @@ h4 {
 }
 
 footer {
-    background: var(--emotional-color);
-    color: var(--text-light);
+    background: var(--text-rosa);
+    color: var(--sad-color);
     padding: 70px 0 30px;
-    border-top: 4px solid var(--logo-gold);
+    border-top: 4px solid var(--text-logo);
 }
 
 .footer-content {
@@ -366,7 +379,7 @@ footer {
     margin-bottom: 25px;
     position: relative;
     padding-bottom: 15px;
-    color: var(--text-logo);
+    color: var(--text-dark);
     /* Color resaltado para títulos */
 }
 
@@ -377,7 +390,7 @@ footer {
     left: 0;
     width: 50px;
     height: 2px;
-    background: var(--logo-gold);
+    background: var(--text-dark);
 }
 
 .footer-links {
@@ -390,17 +403,17 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--text-suave);
+    color: var(--sad-color);
 }
 
 .footer-links a {
     text-decoration: none;
-    color: var(--text-suave);
+    color: var(--sad-color);
     transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: var(--logo-gold);
+    color: var(--card-purple);
 }
 
 .social-links {
@@ -417,15 +430,16 @@ footer {
     height: 40px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    color: var(--text-suave);
-    font-size: 18px;
+    color: var(--text-dark);
+    font-size: 28px;
     transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    background: var(--logo-gold);
+    background: var(--card-purple);
     transform: translateY(-3px);
 }
+
 
 /* ============================================================
    DISEÑO MÓVIL FINAL: LOGO ARRIBA Y MENÚ ABAJO
@@ -436,73 +450,66 @@ footer {
     header {
         padding: 15px 0;
     }
-
     .header-container {
-        flex-direction: column !important; /* Logo arriba, Nav abajo */
+        flex-direction: column !important;
+        /* Logo arriba, Nav abajo */
         gap: 15px;
         text-align: center;
     }
-
     .logo {
         justify-content: center;
         width: 100%;
     }
-
     .logo-text {
         font-size: 24px !important;
-        white-space: nowrap; /* Mantiene "Happy Moments" en una línea */
+        white-space: nowrap;
+        /* Mantiene "Happy Moments" en una línea */
     }
-
     /* 2. Menú de Navegación debajo del logo */
     nav {
         width: 100%;
     }
-
     nav ul {
-        flex-direction: row; /* Mantenemos los links en fila */
+        flex-direction: row;
+        /* Mantenemos los links en fila */
         justify-content: center;
-        flex-wrap: wrap; /* Si son muchos, se pasan a otra línea */
+        flex-wrap: wrap;
+        /* Si son muchos, se pasan a otra línea */
         gap: 15px;
         padding: 0;
     }
-
     nav a {
         font-size: 14px;
         padding: 5px 10px;
     }
-
     .nav-buttons {
-        display: none; /* Ocultamos el botón largo para ganar espacio */
+        display: none;
+        /* Ocultamos el botón largo para ganar espacio */
     }
-
     /* 3. Ajuste de la Sección de Bienvenida (Hero) */
     .hero {
         height: auto;
-        padding: 160px 0 60px; /* Aumentamos espacio superior por el header más alto */
+        padding: 160px 0 60px;
+        /* Aumentamos espacio superior por el header más alto */
     }
-
     .hero .container {
         flex-direction: column !important;
         align-items: center;
         text-align: center;
     }
-
     .hero-content {
         width: 100% !important;
         padding: 0 20px;
     }
-
     .hero-title {
         font-size: 28px !important;
         line-height: 1.2;
         margin-bottom: 20px;
     }
-
     .hero-subtitle {
         justify-content: center;
         font-size: 14px;
     }
-
     /* Imagen del sol/logo centrada abajo del texto */
     .hero img {
         width: 80% !important;
@@ -510,24 +517,23 @@ footer {
         height: auto;
         margin-top: 30px;
     }
-
     /* 4. Catálogo: Una sola tarjeta por fila */
     .product-grid {
         grid-template-columns: 1fr !important;
         padding: 0 10px;
     }
-
     /* 5. Footer Centrado */
     .footer-content {
         grid-template-columns: 1fr !important;
         text-align: center;
     }
-
     .footer-column h3::after {
         left: 50% !important;
         transform: translateX(-50%);
     }
 }
+
+
 /* Animations */
 
 @keyframes fadeInUp {
