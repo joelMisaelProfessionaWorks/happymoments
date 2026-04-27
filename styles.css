@@ -1,4 +1,4 @@
-:root { 
+:root {
     --Happy-color: #3E2723;
     --emotional-color: #6F4E37;
     --sad-color: #161515;
@@ -15,6 +15,7 @@
     --second-part: #2D2D2D;
     --card-purple: #d8cff7;
     --title-vino: #641E16;
+    --mobiliario: #C19A6B;
 }
 
 * {
@@ -222,9 +223,10 @@ nav a:hover:after {
 /* products section */
 
 .products {
-    padding: 120px 0;
-    position: relative;
+    padding: 80px 0;
     background-color: var(--text-pink);
+    /* El color rosa que quieres */
+    position: relative;
     border-top: 4px solid var(--text-logo);
 }
 
@@ -263,6 +265,55 @@ nav a:hover:after {
     font-size: 18px;
     color: var(--sad-color);
 }
+
+
+/* Category Divider mobiliario y baby sets */
+
+.category-divider {
+    margin: 80px 0 40px;
+    /* Un poco más de espacio arriba para que no respire mejor */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Título de la categoría con icono decorativo */
+
+.category-title {
+    font-size: 2rem;
+    color: var(--mobiliario);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centra el icono y el texto horizontalmente */
+    gap: 15px;
+    /* Espacio entre el icono y el texto */
+}
+
+
+/* Icono decorativo para el título de la categoría */
+
+.category-title i {
+    color: var(--mobiliario);
+    font-size: 1.8rem;
+}
+
+.category-divider hr {
+    border: none;
+    height: 4px;
+    /* Usamos el dorado del logo y el café del mobiliario para que combine */
+    background: linear-gradient(to right, var(--text-logo), var(--mobiliario));
+    width: 80px;
+    margin-top: 10px;
+    /* Separación entre el texto y la línea */
+    border-radius: 10px;
+}
+
+
+/* end of category divider */
 
 .product-grid {
     display: grid;
@@ -438,99 +489,6 @@ footer {
 .social-links a:hover {
     background: var(--card-purple);
     transform: translateY(-3px);
-}
-
-
-/* ============================================================
-   DISEÑO MÓVIL FINAL: LOGO ARRIBA Y MENÚ ABAJO
-   ============================================================ */
-
-@media (max-width: 768px) {
-    /* 1. Header: Apilamos logo y navegación verticalmente */
-    header {
-        padding: 15px 0;
-    }
-    .header-container {
-        flex-direction: column !important;
-        /* Logo arriba, Nav abajo */
-        gap: 15px;
-        text-align: center;
-    }
-    .logo {
-        justify-content: center;
-        width: 100%;
-    }
-    .logo-text {
-        font-size: 24px !important;
-        white-space: nowrap;
-        /* Mantiene "Happy Moments" en una línea */
-    }
-    /* 2. Menú de Navegación debajo del logo */
-    nav {
-        width: 100%;
-    }
-    nav ul {
-        flex-direction: row;
-        /* Mantenemos los links en fila */
-        justify-content: center;
-        flex-wrap: wrap;
-        /* Si son muchos, se pasan a otra línea */
-        gap: 15px;
-        padding: 0;
-    }
-    nav a {
-        font-size: 14px;
-        padding: 5px 10px;
-    }
-    .nav-buttons {
-        display: none;
-        /* Ocultamos el botón largo para ganar espacio */
-    }
-    /* 3. Ajuste de la Sección de Bienvenida (Hero) */
-    .hero {
-        height: auto;
-        padding: 160px 0 60px;
-        /* Aumentamos espacio superior por el header más alto */
-    }
-    .hero .container {
-        flex-direction: column !important;
-        align-items: center;
-        text-align: center;
-    }
-    .hero-content {
-        width: 100% !important;
-        padding: 0 20px;
-    }
-    .hero-title {
-        font-size: 28px !important;
-        line-height: 1.2;
-        margin-bottom: 20px;
-    }
-    .hero-subtitle {
-        justify-content: center;
-        font-size: 14px;
-    }
-    /* Imagen del sol/logo centrada abajo del texto */
-    .hero img {
-        width: 80% !important;
-        max-width: 280px;
-        height: auto;
-        margin-top: 30px;
-    }
-    /* 4. Catálogo: Una sola tarjeta por fila */
-    .product-grid {
-        grid-template-columns: 1fr !important;
-        padding: 0 10px;
-    }
-    /* 5. Footer Centrado */
-    .footer-content {
-        grid-template-columns: 1fr !important;
-        text-align: center;
-    }
-    .footer-column h3::after {
-        left: 50% !important;
-        transform: translateX(-50%);
-    }
 }
 
 
