@@ -491,6 +491,75 @@ footer {
     transform: translateY(-3px);
 }
 
+/* --- RESPONSIVE DESIGN OF MOBILE VIEW --- */
+
+@media (max-width: 768px) {
+    /* Ajuste del Header */
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+
+    /* Ajuste del Hero (Bienvenida) */
+    .hero {
+        height: auto; /* Quitamos el 100vh para que no se encime el texto */
+        padding: 120px 0 50px;
+    }
+
+    .hero .container {
+        flex-direction: column; /* Texto arriba, imagen abajo */
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    .hero-title {
+        font-size: 32px; /* Texto más pequeño para que no se corte */
+    }
+
+    .hero-subtitle {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .hero img {
+        width: 100%; /* La imagen se ajusta al ancho del cel */
+        height: auto;
+        margin-top: 30px;
+    }
+
+    /* Ajuste de la cuadrícula de productos */
+    .product-grid {
+        grid-template-columns: 1fr; /* Una sola columna en celulares */
+        padding: 0 10px;
+    }
+
+    /* Ajuste del Footer */
+    .footer-content {
+        grid-template-columns: 1fr; /* Una columna en lugar de tres */
+        text-align: center;
+    }
+
+    .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%); /* Centrar la línea decorativa */
+    }
+
+    .footer-links li {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
 
 /* Animations */
 
