@@ -372,9 +372,12 @@ nav a:hover:after {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+
+/* color del titutlo de las cartas de productos */
+
 .product-title {
     font-size: 24px;
-    color: var(--text-light);
+    color: var(--text-logo);
     margin-bottom: 10px;
 }
 
