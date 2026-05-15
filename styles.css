@@ -561,6 +561,83 @@ footer {
 }
 
 
+/* Estilo base corregido para el botón de Seleccionar */
+
+.btn-select {
+    display: flex !important;
+    /* Forzamos a que el navegador lo dibuje sí o sí */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    /* Un poco más de espacio interno */
+    margin-top: 15px;
+    background-color: #ffffff !important;
+    /* Fondo blanco inicial para que resalte sobre la tarjeta morada */
+    border: 2px solid #6c5ce7 !important;
+    /* Morado fijo por si falla tu variable */
+    color: #6c5ce7 !important;
+    /* Texto morado fijo */
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    /* Evita que se solape por fallas de overflow */
+    z-index: 10;
+}
+
+
+/* Efecto Hover */
+
+.btn-select:hover {
+    background-color: #6c5ce7 !important;
+    color: white !important;
+}
+
+
+/* Clase aplicada con JavaScript cuando está seleccionado */
+
+.btn-select.selected {
+    background-color: #6c5ce7 !important;
+    /* Se vuelve completamente morado */
+    color: white !important;
+    /* El texto pasa a blanco para contrastar */
+    border-color: #5b4cc4 !important;
+}
+
+
+/* Animación de entrada botando para el carrito flotante */
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Efecto hover interactivo para el carrito flotante */
+
+#cart-floating-btn:hover {
+    transform: scale(1.1);
+    background-color: #1ebd59 !important;
+    transition: all 0.2s ease;
+}
+
+
 /* Animations */
 
 @keyframes fadeInUp {
