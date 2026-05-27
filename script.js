@@ -97,7 +97,7 @@ function confirmarYEnviar() {
     cerrarModalConfirmacion();
 
     const numeroTel = "528448804726";
-    let mensaje = "¡Hola! Me gustaría armar un paquete personalizado con los siguientes servicios:\n\n";
+    let mensaje = "¡Hola! Me gustaría información de los siguientes servicios:\n\n";
 
     productosSeleccionados.forEach((prod, i) => {
         mensaje += `${i + 1}. *${prod.name}*\n`;
